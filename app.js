@@ -20,8 +20,7 @@ return response;
 function populateTodos(data) {
 
     const todolistElement = document.getElementById('todo_list');
-    const todoHtml = data
-    .map((todo, index) => {
+    const todoHtml = data.map((todo, index) => {
         return `<li><form>
         <input type="text" value="${todo.title}" id="todo_${index}" name="todo_${index}">
         <button onclick="changeTodo(event, ${index}, '${todo.id}')">Update</button>
